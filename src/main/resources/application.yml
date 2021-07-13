@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springhibernatedb2?createDatabaseIfNotExist=true
+    username: root
+    password: Test1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        cache:
+          use_second_level_cache: true
+          region:
+            factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+      javax:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE  #2nd level cache will be enabled only for those entities which are annotated with @Cache
+    open-in-view: false
+
+logging:
+  level:
+    net:
+      sf:
+        ehcache: debug
