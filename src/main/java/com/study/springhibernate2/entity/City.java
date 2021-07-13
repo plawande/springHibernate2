@@ -24,3 +24,6 @@ public class City {
     @Column(name = "population")
     private Long population;
 }
+
+//https://examples.javacodegeeks.com/enterprise-java/hibernate/second-level-cache-hibernate-example/
+//https://www.netsurfingzone.com/hibernate/hibernate-jpa-ehcache-configuration-example/
