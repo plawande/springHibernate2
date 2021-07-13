@@ -25,4 +25,4 @@ logging:
   level:
     net:
       sf:
-        ehcache: debug
+        ehcache: error
