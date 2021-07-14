@@ -25,5 +25,6 @@ public class City {
     private Long population;
 }
 
+//https://www.devtalkers.com/2020/04/hibernate-second-level-cache-spring.html
 //https://examples.javacodegeeks.com/enterprise-java/hibernate/second-level-cache-hibernate-example/
 //https://www.netsurfingzone.com/hibernate/hibernate-jpa-ehcache-configuration-example/

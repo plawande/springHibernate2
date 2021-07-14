@@ -8,8 +8,8 @@
     <defaultCache
             maxElementsInMemory="10000"
             eternal="false"
-            timeToIdleSeconds="1200"
-            timeToLiveSeconds="360"
+            timeToIdleSeconds="360"
+            timeToLiveSeconds="720"
             maxElementsOnDisk="10000000"
             diskExpiryThreadIntervalSeconds="120"
             memoryStoreEvictionPolicy="LRU">
@@ -21,7 +21,7 @@
             maxElementsInMemory="10000"
             eternal="false"
             timeToIdleSeconds="120"
-            timeToLiveSeconds="180"
+            timeToLiveSeconds="360"
             maxElementsOnDisk="10000000"
             diskExpiryThreadIntervalSeconds="120"
             memoryStoreEvictionPolicy="LRU">
@@ -29,3 +29,10 @@
     </cache>
 
 </ehcache>
+
+<!--
+    If we don't create this file then the default file ehcache-failsafe.xml would provide you the defaultCache configuration
+    The below two are the most important properties
+    timeToIdleSeconds="120"  //lifespan in the cache without being touched (the object will be evicted from cache if it remains untouched for 120 secs)
+    timeToLiveSeconds="360"  //total lifespan in the cache
+-->
